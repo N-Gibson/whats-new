@@ -1,8 +1,8 @@
 import React from 'react';
 import './NewsContainer.css'
 
-const NewsContainer = () => {
-  return <main>This is the main</main>
+const NewsContainer = (story) => {
+  return <div>{story.story.headline}</div>
 }
 
 export default NewsContainer;

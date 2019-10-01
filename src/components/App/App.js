@@ -12,9 +12,10 @@ class App extends Component {
   }
 
   render () {
+    let news = this.state.local.map((article, i) => <NewsContainer key={`article ${i}`} story={article}/>)
     return (
       <div className="app">
-        <NewsContainer />
+      {news}
       </div>
     );
   }
