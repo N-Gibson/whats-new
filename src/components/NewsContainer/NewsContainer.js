@@ -4,7 +4,7 @@ import NewsArticle from '../NewsArticle/NewsArticle';
 
 const NewsContainer = (story) => {
   return (
-    story.news.science.map((article, i) => <NewsArticle key={`article ${i}`} story={article}/>)
+    story.news.currentCategory.map((article, i) => <NewsArticle key={`article ${i}`} story={article}/>)
   )
 }
 

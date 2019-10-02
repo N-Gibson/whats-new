@@ -16,13 +16,13 @@ class App extends Component {
       technology,
       entertainment, 
       science,
-      health
+      health,
+      currentCategory: local
     }
   }
 
   pickNews = (category) => {
-    this.setState({ [category]: this.state[category] });
-    console.log(this.state);
+    this.setState({ currentCategory: this.state[category] });
   }
 
   render () {
