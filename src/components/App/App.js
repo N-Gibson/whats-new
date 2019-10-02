@@ -21,7 +21,7 @@ class App extends Component {
   }
 
   pickNews = (category) => {
-    this.setState( { [category]: this.state[category] } );
+    this.setState({ [category]: this.state[category] });
     console.log(this.state);
   }
 
@@ -29,8 +29,10 @@ class App extends Component {
     return (
       <main className='main'>
         <h1>What's <span className='h1-span'>New?</span></h1>
-        <input type='text'></input>
-        <button>Search Now</button>
+        <div className='search'>
+          <input type='text'></input>
+          <button>Search Now</button>
+        </div>
         <Menu pickNews={this.pickNews}/>
         <NewsContainer news={this.state}/>
       </main>
