@@ -39,12 +39,19 @@ class App extends Component {
     }
   }
 
+  runOnEnter = (event) => {
+    const inputValue  = event.target.parentNode.firstChild.value.toLowerCase();
+    if(event.key === 'Enter') {
+      this.searchNews(inputValue)
+    }
+  };
+
   render () {
     return (
       <main className='main'>
         <div className='nav'>
           <h1>What's <span className='h1-span'>New?</span></h1>
-          <SearchForm searchNews={this.searchNews}/>
+          <SearchForm searchNews={this.searchNews} onEnter={this.runOnEnter}/>
         </div>
         <Menu pickNews={this.pickNews}/>
         <NewsContainer news={this.state}/>

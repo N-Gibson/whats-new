@@ -14,7 +14,7 @@ class SearchForm extends Component {
   render() {
     return (
       <div className='search'>
-        <input className='search-input' type='text'></input>
+        <input className='search-input' type='text' onKeyDown={event => this.props.onEnter(event)}></input>
         <button className='search-button' onClick={event => this.search(event)}>Search Now</button>
       </div>
     )
