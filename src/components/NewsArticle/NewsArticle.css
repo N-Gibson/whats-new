@@ -5,6 +5,8 @@
 }
 
 .article {
+  background-color: #fff;
   margin: 10px;
   text-align: center;
+  width: 40%;
 }

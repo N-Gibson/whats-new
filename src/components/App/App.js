@@ -49,12 +49,14 @@ class App extends Component {
   render () {
     return (
       <main className='main'>
-        <div className='nav'>
+        <div className='header'>
           <h1>What's <span className='h1-span'>New?</span></h1>
           <SearchForm searchNews={this.searchNews} onEnter={this.runOnEnter}/>
         </div>
         <Menu pickNews={this.pickNews}/>
-        <NewsContainer news={this.state}/>
+        <div className='news-container'>
+          <NewsContainer news={this.state}/>
+        </div>
       </main>
     );
   }

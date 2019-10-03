@@ -12,6 +12,22 @@
   width: 100%;
 }
 
+.header {
+  display: flex;
+  grid-area: head;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.main {
+  background: #141527;
+  display: grid;
+  grid-template-columns: 20% 1fr 1fr;
+  grid-template-areas:
+    'head head head'
+    'nav body body';
+}
+
 img {
   height: 300px;
 }
@@ -19,18 +35,3 @@ img {
 h1 {
   display: inline;
 }
-
-.search {
-  display: inline;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-nav {
-  height: 50px;
-}
-

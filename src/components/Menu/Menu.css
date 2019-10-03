@@ -5,6 +5,7 @@
 }
 
 .nav-button {
-  height: 100%;
-  width: 20%;
+  height: 40px;
+  margin: 5px;
+  width: 100%;
 }
