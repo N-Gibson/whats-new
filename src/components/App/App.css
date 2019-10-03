@@ -15,3 +15,22 @@
 img {
   height: 300px;
 }
+
+h1 {
+  display: inline;
+}
+
+.search {
+  display: inline;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+nav {
+  height: 50px;
+}
+
