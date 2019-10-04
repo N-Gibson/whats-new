@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import local from '../../data/local';
 import './App.css';
-import technology from '../../data/technology';
-import entertainment from '../../data/entertainment';
-import science from '../../data/science';
-import health from '../../data/health';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
 import SearchForm from '../SearchForm/SearchForm';
@@ -13,16 +9,24 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      local,
-      technology,
-      entertainment, 
-      science,
-      health,
+      local: null,
+      technology: null,
+      entertainment: null,
+      science: null,
+      health: null,
       currentCategory: local,
       categoryName: local
     }
+    this.fetchData();
   }
-
+  
+  fetchData = () => {
+  fetch('https://whats-new-api.herokuapp.com/api/v1/news')
+  .then(data => data.json())
+  .then(json => this.setState({ local: json.local, technology: json.technology, entertainment: json.entertainment, science: json.science, health: json.health }))
+  .catch(error => console.log(error))
+  }
+  
   pickNews = (category) => {
     this.setState({ currentCategory: this.state[category] });
 
