@@ -14,15 +14,39 @@ describe('App', () => {
   });
 
   it('should be able to pick news', () => {
-    const localData = {
+    const data = { localData: {
       id: 1,
       headline: 'Breaking News',
       img: 'src...',
       description: 'Something happened',
       url: 'url...'
-    }
+    }, technologyData : {
+      id: 2,
+      headline: 'Breaking News',
+      img: 'src...',
+      description: 'Something happened',
+      url: 'url...'
+    }, entertainmentData: {
+      id: 3,
+      headline: 'Breaking News',
+      img: 'src...',
+      description: 'Something happened',
+      url: 'url...'
+    }, scienceData: {
+      id: 4,
+      headline: 'Breaking News',
+      img: 'src...',
+      description: 'Something happened',
+      url: 'url...'
+    }, healthData: {
+      id: 1,
+      headline: 'Breaking News',
+      img: 'src...',
+      description: 'Something happened',
+      url: 'url...'
+    }}
 
-    wrapper.setState({local : localData})
+    wrapper.setState({local : localData, technology: technologyData, entertainment: entertainmentData, science: scienceData, health: healthData})
 
     wrapper.instance().pickNews('local')
 
