@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News Article should match the snapshot 1`] = `
+<article
+  className="article"
+>
+  <img
+    src="mock image filepath"
+  />
+  <h2>
+    mock headline
+  </h2>
+  <p>
+    mock description
+  </p>
+  <a
+    href="mock url"
+  >
+    Link To Article
+  </a>
+</article>
+`;

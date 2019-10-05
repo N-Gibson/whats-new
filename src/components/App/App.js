@@ -23,7 +23,7 @@ class App extends Component {
   fetchData = () => {
   fetch('https://whats-new-api.herokuapp.com/api/v1/news')
   .then(data => data.json())
-  .then(json => this.setState({ local: json.local, technology: json.technology, entertainment: json.entertainment, science: json.science, health: json.health }))
+  .then(data => this.setState({ local: data.local, technology: data.technology, entertainment: data.entertainment, science: data.science, health: data.health }))
   .catch(error => console.log(error))
   }
   

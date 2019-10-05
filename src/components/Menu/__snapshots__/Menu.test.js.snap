@@ -1,3 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Menu should match the snapshot with all of the correct data 1`] = `ShallowWrapper {}`;
+exports[`Menu should match the snapshot with all of the correct data 1`] = `
+<nav>
+  <button
+    className="nav-button"
+    data-category="local"
+    onClick={[Function]}
+  >
+    Local
+  </button>
+  <button
+    className="nav-button"
+    data-category="technology"
+    onClick={[Function]}
+  >
+    Technology
+  </button>
+  <button
+    className="nav-button"
+    data-category="entertainment"
+    onClick={[Function]}
+  >
+    Entertainment
+  </button>
+  <button
+    className="nav-button"
+    data-category="science"
+    onClick={[Function]}
+  >
+    Science
+  </button>
+  <button
+    className="nav-button"
+    data-category="health"
+    onClick={[Function]}
+  >
+    Health
+  </button>
+</nav>
+`;
