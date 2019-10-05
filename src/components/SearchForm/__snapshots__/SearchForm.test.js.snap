@@ -7,6 +7,7 @@ exports[`Search Form should match snapshot 1`] = `
   <input
     className="search-input"
     onKeyDown={[Function]}
+    placeholder="Search for news article here."
     type="text"
   />
   <button
