@@ -28,7 +28,7 @@ describe('Search Form', () => {
     const mockEvent = { target: { parentNode: { firstChild: { value: 'finally the value '} } } };
     const mockRunOnEnter = jest.fn();
 
-    wrapper.find('input').simulate('onKeyDown', mockEvent);
+    wrapper.find('.search-input').simulate('keydown', {key: 'Enter'});
 
     expect(mockRunOnEnter).toHaveBeenCalledWith(mockEvent)
   });

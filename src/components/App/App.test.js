@@ -14,10 +14,7 @@ describe('App', () => {
   });
 
   it('should be able to pick news', () => {
-
-  // Need to mock the state better so that the method pick news can have the appropriate keys to dig through
-
-    const local = {
+    const localData = {
       id: 1,
       headline: 'Breaking News',
       img: 'src...',
@@ -25,36 +22,22 @@ describe('App', () => {
       url: 'url...'
     }
 
+    wrapper.setState({local : localData})
+
     wrapper.instance().pickNews('local')
 
-    console.log(wrapper.state('currentCategory'))
-    expect(wrapper.state('currentCategory')).toEqual(local)
+    expect(wrapper.state('currentCategory')).toEqual(localData)
   })
 
   it('should be able to search through news', () => {
-
-    wrapper.instance().setState( { currentCategory: { id: 1,
-      headline: 'Breaking News',
-      img: 'src...',
-      description: 'Something happened',
-      url: 'url...' } } );
+    wrapper.instance().setState( { currentCategory: [{ id: 1, headline: 'Breaking News', img: 'src...', description: 'Something happened', url: 'url...' }, { id: 2, headline: 'Other news', img: 'src...', description: 'Something happened', url: 'url...' }] } );
 
     wrapper.instance().searchNews('spider');
 
     expect(wrapper.state('currentCategory')).toEqual([])
 
-    wrapper.instance().setState( { currentCategory: { id: 1,
-      headline: 'Breaking News',
-      img: 'src...',
-      description: 'Something happened',
-      url: 'url...' } } );
+    wrapper.instance().searchNews('Breaking');
 
-      wrapper.instance().searchNews('Breaking');
-
-      expect(wrapper.state('currentCategory')).toEqual({ id: 1,
-        headline: 'Breaking News',
-        img: 'src...',
-        description: 'Something happened',
-        url: 'url...' })
+    expect(wrapper.state('currentCategory')).toEqual([{ id: 1, headline: 'Breaking News', img: 'src...', description: 'Something happened', url: 'url...' }])
   });
 });
