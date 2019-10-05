@@ -46,12 +46,22 @@ describe('App', () => {
       url: 'url...'
     }}
 
-    wrapper.setState({local : localData, technology: technologyData, entertainment: entertainmentData, science: scienceData, health: healthData})
+    wrapper.setState({local : data.localData, technology: data.technologyData, entertainment: data.entertainmentData, science: data.scienceData, health: data.healthData})
+
+    expect(wrapper.state('local')).toEqual(data.localData);
+    expect(wrapper.state('technology')).toEqual(data.technologyData);
+    expect(wrapper.state('entertainment')).toEqual(data.entertainmentData);
+    expect(wrapper.state('science')).toEqual(data.scienceData);
+    expect(wrapper.state('health')).toEqual(data.healthData);
+  });
+
+  it('should be able to pick news', () => {
+    const localData = { id: 1, headline: 'Breaking News', img: 'src...', description: 'Something happened', url: 'url...' }
 
     wrapper.instance().pickNews('local')
 
     expect(wrapper.state('currentCategory')).toEqual(localData)
-  })
+  });
 
   it('should be able to search through news', () => {
     wrapper.instance().setState( { currentCategory: [{ id: 1, headline: 'Breaking News', img: 'src...', description: 'Something happened', url: 'url...' }, { id: 2, headline: 'Other news', img: 'src...', description: 'Something happened', url: 'url...' }] } );
