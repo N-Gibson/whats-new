@@ -4,8 +4,33 @@
   padding: 0;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+  grid-area: nav;
+  height: 400px;
+  padding: 20px 20px 20px 40px;
+}
+
 .nav-button {
-  height: 40px;
-  margin: 5px;
+  background-color: #131527;
+  border: none;
+  border-radius: 0px 20px 20px 0px;
+  color: #fff;
+  font-size: 1em;
+  height: 50px;
+  margin: 10px 0px;
+  padding-left: 10px;
+  text-align: left;
   width: 100%;
+}
+
+.nav-button:hover {
+  background-color: #FFAE02;
+  cursor: pointer;
+}
+
+.nav-button:focus {
+  background-color: #FFAE02;
+  outline: none;
 }

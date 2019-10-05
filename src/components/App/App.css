@@ -4,9 +4,13 @@
   padding: 0;
 }
 
+html {
+  background-color: #141527;;
+}
+
 .app {
   display: flex;
-  background: #141527;
+  background-color: #141527;
   height: 100vh;
   text-align: center;
   width: 100%;
@@ -34,4 +38,5 @@ img {
 
 h1 {
   display: inline;
+  margin-left: 40px;
 }
