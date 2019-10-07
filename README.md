@@ -8,4 +8,8 @@ This is my first app build using React. The purpose of this project is to build 
 - Enzyme 
 - This application was built with `create-react-app`.
 
+## Comp 
+
+The app is deployed at this location: https://n-gibson.github.io/whats-new/
+
 ![screencapture-localhost-3000-2019-10-06-20_41_29](https://user-images.githubusercontent.com/49107377/66281705-b8c33b00-e879-11e9-9335-8905e29f4877.png)
